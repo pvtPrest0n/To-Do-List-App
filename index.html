@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./src/css/main.css" />
+        <title>Mobile ToDo Manager</title>
+    </head>
+    <body>
+        <main>
+            <div class="wrapper">
+                <h1 class="heading">To Do List</h1>
+                <div class="task-container">
+                    <div class="tasks" id="tasks">
+                        <!-- <h1 class="empty-heading" id="empty">List is empty</h1> -->
+                        <!-- <div class="task" id="task">
+                            <div class="task-date">Monday, 12th May</div>
+                            <div class="task-block">
+                                <div class="task-info">
+                                    <h1 class="task-title">Buy groceries</h1>
+                                    <div class="task-tag high">High</div>
+                                    <div class="task-done none" id="done">Done</div>
+                                </div>
+                                <div class="task-tools">
+                                    <button data-action="done" class="task-done btn"><img class="filter" src="./src/img/done.svg" alt="edit" /></button>
+                                    <button data-action="delete" class="task-delete btn"><img src="./src/img/delete.png" alt="edit" /></button>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+                <button class="task-add__button" id="add-task">
+                    <img src="./src/img/add.png" alt="add" class="add__icon" />
+                </button>
+                <div class="modal" id="modalWindow">
+                    <div class="modal-content">
+                        <form class="modal-form" id="form">
+                            <input type="text" maxlength="20" class="modal-form__input" id="form-input" name="fname" placeholder="Enter task name" />
+                            <input type="date" onkeydown="return false" name="fdate" id="form-date" />
+                            <div class="row-block">
+                                <label for="task-priority">Priority:</label>
+                                <select style="cursor: pointer" name="task-priority" id="task-priority">
+                                    <option value="Medium">Medium</option>
+                                    <option value="High">High</option>
+                                </select>
+                            </div>
+                            <div class="button-block">
+                                <button type="submit" class="modal-form__ok modal-btn" id="send-button">Ok</button>
+                            </div>
+                        </form>
+                        <button class="modal-content__close modal-btn" id="close-button">Close</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <script src="./src/JS/main.js"></script>
+    </body>
+</html>
